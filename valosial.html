@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URGENT: Mission Briefing</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Teko:wght@500;700&display=swap');
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #0f1923; 
+      color: #ece8e1; 
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      
+      background-image: 
+        linear-gradient(rgba(15, 25, 35, 0.7), rgba(15, 25, 35, 0.95)), 
+        url('https://4kwallpapers.com/images/wallpapers/valorant-girls-3840x2160-14812.jpg'), 
+        url('https://cdna.artstation.com/p/assets/images/images/027/275/976/original/suke-new-4-5.gif?1591083760'); 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; 
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(31, 39, 49, 0.95); 
+      padding: 40px 60px;
+      border-top: 4px solid #ff4655; 
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); 
+      position: relative;
+      border-radius: 4px;
+      backdrop-filter: blur(5px); 
+      max-width: 500px;
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ff4655;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(255, 70, 85, 0.5);
+      background-color: #1f2731; 
+    }
+
+    h1 {
+      font-family: 'Teko', sans-serif;
+      font-size: 4rem;
+      color: #ff4655;
+      margin: 0 0 10px 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(255, 70, 85, 0.5); 
+    }
+
+    .welcome-title {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px black; 
+    }
+
+    .welcome-text {
+      font-size: 1.5rem;
+      color: #ece8e1;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #ff4655;
+      text-shadow: 0 0 5px rgba(255, 70, 85, 0.7);
+    }
+    
+    .noob-text {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #ff4655;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .carry-text {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ece8e1;
+      margin-bottom: 10px;
+    }
+
+    .whatsapp-text {
+      color: #25D366; 
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin: 15px 0;
+      text-shadow: 0 0 5px rgba(37, 211, 102, 0.4);
+    }
+
+    .excuse-box {
+      width: 90%;
+      height: 60px;
+      background-color: rgba(15, 25, 35, 0.8);
+      color: #ece8e1;
+      border: 2px solid #ece8e1;
+      padding: 10px;
+      font-family: 'Arial', sans-serif;
+      font-size: 1rem;
+      resize: none;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .excuse-box:focus {
+      outline: none;
+      border-color: #ff4655;
+      box-shadow: 0 0 8px rgba(255, 70, 85, 0.6);
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    button {
+      font-family: 'Teko', sans-serif;
+      font-size: 1.5rem;
+      padding: 10px 30px;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: transform 0.1s, background-color 0.2s;
+      border-radius: 2px;
+    }
+
+    #acceptBtn, #openInviteBtn {
+      background-color: #ff4655;
+      color: #ece8e1;
+      box-shadow: 0 4px 0 #b3303a; 
+    }
+
+    #acceptBtn:hover, #openInviteBtn:hover {
+      background-color: #e03e4d;
+      transform: translateY(-2px); 
+    }
+
+    #acceptBtn:active, #openInviteBtn:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 0 #b3303a;
+    }
+
+    #declineBtn, #backBtn {
+      background-color: #ece8e1;
+      color: #0f1923;
+      box-shadow: 0 4px 0 #b8b4af;
+    }
+
+    #declineBtn:hover, #backBtn:hover {
+      background-color: #d1cdc7;
+      transform: translateY(-2px);
+    }
+
+    #declineBtn:active, #backBtn:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 0 #b8b4af;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container" id="inviteBox">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Paper_Rex_logo.png/600px-Paper_Rex_logo.png" alt="PRX Logo" class="profile-pic">
+    
+    <h1 class="welcome-title">Incoming Transmission</h1>
+    <p class="welcome-text">Congrats, you are invited to play valorant with <strong>PRX nukman</strong></p>
+    
+    <div class="button-container">
+      <button id="openInviteBtn">Open Invitation</button>
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById('inviteBox');
+
+    // Attach listener to the initial "Open Invitation" button
+    document.getElementById('openInviteBtn').addEventListener('click', loadHomePage);
+
+    // Function to load the main Mission Briefing (Duty Calls)
+    function loadHomePage() {
+      container.style.borderTopColor = '#ff4655';
+      
+      container.innerHTML = `
+        <h1>Duty Calls</h1>
+        <p>You have been officially summoned to queue up with <strong>Nuk</strong>.</p>
+        <p><strong>Target Time:</strong> 22 May 2026 @ <span class="highlight">11:00 PM</span></p>
+        <p><strong>Mission:</strong> Valorant</p>
+        
+        <div class="button-container">
+          <button id="acceptBtn">Accept Mission</button>
+          <button id="declineBtn">Decline</button>
+        </div>
+      `;
+
+      // Attach event listeners for accept/decline
+      document.getElementById('acceptBtn').addEventListener('click', loadAcceptPage);
+      document.getElementById('declineBtn').addEventListener('click', loadDeclinePage);
+    }
+
+    // Function to load the Accepted screen
+    function loadAcceptPage() {
+      container.innerHTML = `
+        <h1>Mission Accepted</h1>
+        <p class="carry-text">Santai, Nuk akan carry.</p>
+        <p class="whatsapp-text">📸 Screenshot this and send it to Nuk via WhatsApp to confirm your slot!</p>
+        <p>See you on the 22nd at 11 PM.</p>
+        
+        <div class="button-container">
+          <button id="backBtn">Return to Base</button>
+        </div>
+      `;
+      
+      // "Return to Base" takes them back to the Mission Briefing
+      document.getElementById('backBtn').addEventListener('click', loadHomePage);
+    }
+
+    // Function to load the Declined screen
+    function loadDeclinePage() {
+      container.innerHTML = `
+        <h1 style="color: #ece8e1; text-shadow: none;">Mission Aborted</h1>
+        <p class="noob-text">You are noob</p>
+        
+        <p style="margin-bottom: 10px;">State your excuse:</p>
+        <textarea class="excuse-box" placeholder="especially (luqman and syahriel)"></textarea>
+        
+        <p class="whatsapp-text" style="font-size: 1.1rem;">📸 Type your excuse, screenshot this, and send it to Nuk via WhatsApp!</p>
+        
+        <div class="button-container">
+          <button id="backBtn">Return to Base</button>
+        </div>
+      `;
+      
+      // Update top border color to match the aborted theme
+      container.style.borderTopColor = '#ece8e1'; 
+      
+      // "Return to Base" takes them back to the Mission Briefing
+      document.getElementById('backBtn').addEventListener('click', loadHomePage);
+    }
+
+  </script>
+
+</body>
+</html>
